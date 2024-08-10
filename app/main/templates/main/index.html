@@ -1,17 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <p>{{ content }}</p>
-    {% if is_authenticated %}
-        <p>{{ list.0 }}</p>
-        <p>{{ dict }}</p>
-    {% endif %}
-</body>
+{% extends "main/base.html" %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href='{% static "deps/css/my_footer_css.css" %}'>
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="mt-5 pt-5"><strong>{{ content }}</strong></h1>
+{% endblock %}
+
+{% block footer %}
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Home Python Hub Studio 2023</p>
+        </div>
+    </footer>
+{% endblock %}
+
 </html>
