@@ -33,3 +33,4 @@ class Products(models.Model):
         return f'{self.name} Количество - {self.quantity}'
 
 
+
